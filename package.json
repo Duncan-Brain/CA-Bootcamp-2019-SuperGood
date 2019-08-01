@@ -1,0 +1,26 @@
+{
+  "name": "supergood",
+  "version": "1.0.0",
+  "description": "Final project for Consensys Bootcamp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "ganache-cli": "^6.4.4",
+    "next": "^9.0.2",
+    "next-routes": "^1.4.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^0.87.3",
+    "truffle": "^5.0.22",
+    "truffle-hdwallet-provider": "^1.0.11"
+  }
+}
