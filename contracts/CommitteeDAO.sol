@@ -121,7 +121,7 @@ contract CommitteeDAO is Nameable{
      */
     /// @dev Contract constructor sets initial owners and required number of confirmations.
     /// @param _owners List of initial owners.
-    /// @param _required Number of required confirmations.
+    /// @param name is the name of the committee
     ///@dev Sets MultiSigWallet transaction pass requirement to 50% + 1.
     constructor(address[] memory _owners, string memory name)
         public
