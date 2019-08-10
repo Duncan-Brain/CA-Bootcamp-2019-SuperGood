@@ -105,7 +105,7 @@ contract SuperGood is Factory, Ownable{
     }
 
     ///@dev Registers charities for UI.
-    ///@param charityAddresss would be the charity address.
+    ///@param charityAddress would be the charity address.
     ///@param watchAddress would be the GoodPortfolio addresses.
     function charitySubscribe(address charityAddress, address watchAddress)
         internal
