@@ -17,7 +17,6 @@ contract SuperGood is Factory, Ownable{
      *  Storage
      */
     uint public SubscriptionCost; //Free Initially
-    uint public UnSubscribeCost; //Free Initially
     address[] public GoodBoards;
     mapping(address => address[]) public SubscribeLookup;
     mapping(address => mapping(address => bool)) isDupeSubscribe;
@@ -55,18 +54,6 @@ contract SuperGood is Factory, Ownable{
         payable
 
     {
-        require(msg.value >= UnSubscribeCost, "Message value incorrect");
-        SubscribeLookup[msg.sender].push(watchAddress);
-        emit SubscribeAdded(msg.sender, watchAddress);
-    }
-
-    ///@dev Registers subscribers for UI.
-    ///@param watchAddress would be an array of board member addresses.
-    function paidUnsubscribe(address watchAddress)
-        public
-        payable
-
-    {
         require(msg.value >= SubscriptionCost, "Message value incorrect");
         SubscribeLookup[msg.sender].push(watchAddress);
         emit SubscribeAdded(msg.sender, watchAddress);
@@ -81,7 +68,7 @@ contract SuperGood is Factory, Ownable{
         onlyOwner
     {
         SubscriptionCost = newCostSub;
-        UnSubscribeCost = newCostUn;
+        
     }
 
     ///@dev Withdraws funds.
