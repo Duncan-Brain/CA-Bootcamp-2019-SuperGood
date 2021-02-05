@@ -1,3 +1,6 @@
+#DEPRECATED
+Project for Consensys Bootcamp - Will be reworked into another project.
+
 **SuperGood**
 
 SuperGood is a multi-signature wallet generator that comes pre-loaded with a non-profit portfolio factory.
